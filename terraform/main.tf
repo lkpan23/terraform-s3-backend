@@ -1,6 +1,6 @@
 resource "aws_kms_key" "tf_state_encryption_key" {
   description             = "This key is used to encrypt tf_state bucket objects"
-  deletion_window_in_days = 10
+  deletion_window_in_days = var.kms_key_deletion_window_in_days
 }
 
 resource "aws_s3_bucket" "terraform_states" {

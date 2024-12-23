@@ -4,7 +4,7 @@ terraform {
   # Manually create this s3 backend bucket for storing the terraform state
   backend "s3" {
     use_lockfile = true
-    # bucket = "cron-lambda-terraform-state-s3-bucket"
+    # bucket = "cron-lambda-terraform-state-s3-bucket-temp"
     # key    = "lambda-cron/terraform.tfstate"
     # region = var.aws_region
   }
